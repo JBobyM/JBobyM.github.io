@@ -3558,7 +3558,15 @@ h6:hover .anchor-link {
  .highlight pre  .il { color: #666666 } /* Literal.Number.Integer.Long */&lt;/style&gt;&lt;body&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;img src="images/jbobym.PNG" alt="So Schmexy"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/jbobym.PNG" alt="jbobym" title="Image Title on mouse-over"&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;&lt;a href="/img/jbobym.png" title="Title that is displayed on mouse-over and as caption in colorbox"&gt;&lt;img src="/img/jbobym.png" alt="jbobym"&gt;{:width=300px}&lt;/a&gt;{class="mybox"}&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
