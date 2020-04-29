@@ -1,6 +1,6 @@
 title: First Post on My Sweet New Blog
 date: 2016-06-08 20:00
-author: Your Name Here
+author: John Boby Mesadieu
 
 # I am On My Way To Internet Fame and Fortune!
 
