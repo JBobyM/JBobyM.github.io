@@ -42,5 +42,15 @@ STATIC_PATHS = ['img']
 
 THEME = "C:\\Users\\Kathee\\Documents\\Blog\\JBobyM.github.io\\pelican-themes\\elegant"
 
+AUTHORS = {
+    u'Andy Wegner': {
+        u'blurb': """ is a father, an engineer and a computer scientist. He is interested in online
+            community building, tinkering with new code and building new applications.
+            He writes about his experiences with each of these.""",
+        u'friendly_name': "Andy Wegner",
+        u'url': 'https://andrewwegner.com/'
+    }
+}
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
