@@ -33,24 +33,17 @@ DEFAULT_PAGINATION = 10
 
 MARKUP = ('md', 'ipynb')
 
-PLUGIN_PATH = './plugins'
-PLUGINS = ['ipynb.markup','i18n_subsites']
-JINJA_ENVIRONMENT = {
-    'extensions': ['jinja2.ext.i18n'],
-}
+PLUGIN_PATH = ['./plugins','./pelican-plugins']
+PLUGINS = ['ipynb.markup','pelican-ert','assets' ]
+IGNORE_FILES = [".ipynb_checkpoints"]
 STATIC_PATHS = ['img']
 
 THEME = "C:\\Users\\Kathee\\Documents\\Blog\\JBobyM.github.io\\pelican-themes\\elegant"
 
-AUTHORS = {
-    u'Andy Wegner': {
-        u'blurb': """ is a father, an engineer and a computer scientist. He is interested in online
-            community building, tinkering with new code and building new applications.
-            He writes about his experiences with each of these.""",
-        u'friendly_name': "Andy Wegner",
-        u'url': 'https://andrewwegner.com/'
-    }
-}
+# This part is for estimating the reading time
+ERT_WPM = 200
+ERT_FORMAT = '{time} read'
+ERT_INT = True
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

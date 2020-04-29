@@ -4,3 +4,6 @@
 [submodule "colorbox"]
 	path = colorbox
 	url = https://github.com/jackmoore/colorbox.git
+[submodule "pelican-plugins"]
+	path = pelican-plugins
+	url = https://github.com/getpelican/pelican-plugins
