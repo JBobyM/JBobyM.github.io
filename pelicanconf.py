@@ -31,5 +31,10 @@ SOCIAL = (('You can add links in your config file', '#'),
 
 DEFAULT_PAGINATION = 10
 
+MARKUP = ('md', 'ipynb')
+
+PLUGIN_PATH = './plugins'
+PLUGINS = ['ipynb.markup']
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
