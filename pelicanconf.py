@@ -34,9 +34,11 @@ DEFAULT_PAGINATION = 10
 MARKUP = ('md', 'ipynb')
 
 PLUGIN_PATH = ['./plugins','./pelican-plugins']
-PLUGINS = ['ipynb.markup','pelican-ert','assets' ]
+PLUGINS = ['ipynb.markup','post_stats']
 IGNORE_FILES = [".ipynb_checkpoints"]
 STATIC_PATHS = ['img']
+
+READING_TIME_LOWER_LIMIT = 4
 
 THEME = "C:\\Users\\Kathee\\Documents\\Blog\\JBobyM.github.io\\pelican-themes\\elegant"
 
