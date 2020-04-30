@@ -2419,7 +2419,7 @@ h6:hover .anchor-link {
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="articles"></category><category term="python firsts"></category></entry><entry><title>First Post on My Sweet New Blog</title><link href="https://JBobyM.github.io/first-post-on-my-sweet-new-blog.html" rel="alternate"></link><published>2016-06-08T20:00:00-05:00</published><updated>2016-06-08T20:00:00-05:00</updated><author><name>John Boby Mesadieu</name></author><id>tag:jbobym.github.io,2016-06-08:/first-post-on-my-sweet-new-blog.html</id><summary type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+</content><category term="articles"></category><category term="python firsts"></category></entry><entry><title>First Post on My Sweet New Blog</title><link href="https://JBobyM.github.io/first-post-on-my-sweet-new-blog.html" rel="alternate"></link><published>2016-06-08T20:00:00-05:00</published><updated>2016-06-08T20:00:00-05:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:jbobym.github.io,2016-06-08:/first-post-on-my-sweet-new-blog.html</id><summary type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h1 id="I-am-On-My-Way-To-Internet-Fame-and-Fortune!"&gt;I am On My Way To Internet Fame and Fortune!&lt;a class="anchor-link" href="#I-am-On-My-Way-To-Internet-Fame-and-Fortune!"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;This is my first post on my new blog. While not super informative it

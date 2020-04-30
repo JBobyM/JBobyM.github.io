@@ -49,8 +49,9 @@ ERT_INT = True
 
 AUTHORS = {
     "John Boby Mesadieu": {
-        "blurb": "is the creator and lead developer of Elegant theme.",
-        "avatar": "/pictures/jbobym.PNG",
+        "url": "https://jbobym.github.io/",
+        "blurb": "is the creator and lead developer of Elegant theme. This is for testing the blurb feature; and obviously it will remove its place to other more interesting content. Far away frow here, ther is lots of different types of people, the main ones are happy and not-happy ones. I'd rather stand it like so because speaking of happiness, we might only refer to high segmented real duality ",
+        "avatar": "https://avatars0.githubusercontent.com/u/50599667?s=400&u=546490185c7aa72c309351ba05a720bc4bc645eb&v=4"
     },
     "Pablo Iranzo Gómez": {
         "url": "http://iranzo.github.io",
