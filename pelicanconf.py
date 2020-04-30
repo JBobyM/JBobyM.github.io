@@ -35,6 +35,7 @@ MARKUP = ('md', 'ipynb')
 
 PLUGIN_PATH = ['./plugins','./pelican-plugins']
 PLUGINS = ['ipynb.markup','post_stats']
+#'share_post'
 IGNORE_FILES = [".ipynb_checkpoints"]
 STATIC_PATHS = ['img']
 
@@ -63,6 +64,25 @@ AUTHORS = {
         "blurb": "ever evolving, ever learning",
     },
 }
+
+SOCIAL = (
+('Twitter','https://twitter.com/jbobym','My Twitter account'),
+('Email', 'jbobyberry.com', 'My Email Address')
+)
+
+SOCIAL_PROFILE_LABEL = u'Stay in Touch'
+
+LANDING_PAGE_ABOUT = {
+"title":"I design mobile apps and work with data for getting insight",
+"details":"I am John Boby Mesadieu. I develope mobile apps for both apple and android os. Mainly I am data scientist who's aim is to play with for having as most insights as possible while having fun"
+}
+APPLAUSE_BUTTON = True
+#LANDING_PAGE_TITLE = "I design and build software products for iOS and OSX"
+
+
+#SHARE_LINKS = [ ('twitter', 'Twitter'), ('facebook', 'Facebook'), ('email', 'Email') ]
+#SHARE_POST_INTRO = "Share me with your friends on"
+#share_post_intro= "Share this article on Elegant with"
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
