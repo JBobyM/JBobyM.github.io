@@ -47,5 +47,21 @@ ERT_WPM = 200
 ERT_FORMAT = '{time} read'
 ERT_INT = True
 
+AUTHORS = {
+    "John Boby Mesadieu": {
+        "blurb": "is the creator and lead developer of Elegant theme.",
+        "avatar": "/pictures/jbobym.PNG",
+    },
+    "Pablo Iranzo Gómez": {
+        "url": "http://iranzo.github.io",
+        "blurb": " opensource enthusiast and Lego fan doing some python simple programs like @redken_bot in telegram, etc",
+        "avatar": "https://avatars.githubusercontent.com/u/312463",
+    },
+    "Jack De Winter": {
+        "url": "http://jackdewinter.github.io",
+        "blurb": "ever evolving, ever learning",
+    },
+}
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
