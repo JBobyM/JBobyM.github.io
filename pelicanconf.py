@@ -77,6 +77,7 @@ LANDING_PAGE_ABOUT = {
 "details":"I am John Boby Mesadieu. I develope mobile apps for both apple and android os. Mainly I am data scientist who's aim is to play with for having as most insights as possible while having fun"
 }
 APPLAUSE_BUTTON = True
+MAILCHIMP_FORM_ACTION = True
 #LANDING_PAGE_TITLE = "I design and build software products for iOS and OSX"
 
 
