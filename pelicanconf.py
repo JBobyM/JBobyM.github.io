@@ -81,6 +81,7 @@ FREELISTS_NAME = "elegant@freelists.org"
 
 STAT_COUNTER_PROJECT = 12249412
 STAT_COUNTER_SECURITY = u'4138fb33'
+COMMENTBOX_PROJECT = u'5675412315176960-proj'
 #LANDING_PAGE_TITLE = "I design and build software products for iOS and OSX"
 
 
