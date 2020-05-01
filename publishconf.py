@@ -19,8 +19,8 @@ CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
 
-COMMENTBOX_PROJECT = u'5675412315176960-proj'
+#COMMENTBOX_PROJECT = u'5675412315176960-proj'
 # Following items are often useful when publishing
 
-#DISQUS_SITENAME = ""
+DISQUS_SITENAME = "datasight"
 #GOOGLE_ANALYTICS = ""
