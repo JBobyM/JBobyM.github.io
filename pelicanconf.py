@@ -80,7 +80,11 @@ APPLAUSE_BUTTON = True
 FREELISTS_NAME = "elegant@freelists.org"
 
 STAT_COUNTER_PROJECT = 12249412
+GOOGLE_ANALYTICS = u'UA-146174561-1'
+
 STAT_COUNTER_SECURITY = u'4138fb33'
+
+#SHARE_POST_INTRO = "Share me with your friends on"
 
 #LANDING_PAGE_TITLE = "I design and build software products for iOS and OSX"
 
