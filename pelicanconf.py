@@ -34,12 +34,12 @@ DEFAULT_PAGINATION = 10
 MARKUP = ('md', 'ipynb')
 
 PLUGIN_PATH = ['./plugins','./pelican-plugins']
-PLUGINS = ['ipynb.markup','post_stats']
+PLUGINS = ['ipynb.markup','readtime','post_stats']
 #'share_post'
 IGNORE_FILES = [".ipynb_checkpoints"]
 STATIC_PATHS = ['img']
 
-READING_TIME_LOWER_LIMIT = 4
+READING_TIME_LOWER_LIMIT = 3
 
 THEME = "C:\\Users\\Kathee\\Documents\\Blog\\JBobyM.github.io\\pelican-themes\\elegant"
 
@@ -77,12 +77,14 @@ LANDING_PAGE_ABOUT = {
 "details":"I am John Boby Mesadieu. I develope mobile apps for both apple and android os. Mainly I am data scientist who's aim is to play with for having as most insights as possible while having fun"
 }
 APPLAUSE_BUTTON = True
-FREELISTS_NAME = "elegant@freelists.org"
+#FREELISTS_NAME = "elegant@freelists.org"
 
 STAT_COUNTER_PROJECT = 12249412
 GOOGLE_ANALYTICS = u'UA-146174561-1'
 
 STAT_COUNTER_SECURITY = u'4138fb33'
+
+MAILCHIMP_FORM_ACTION = 'https://github.us8.list-manage.com/subscribe/post?u=517e9014963fd595cf3dbb7d4&amp;id=65134d64e7'
 
 #SHARE_POST_INTRO = "Share me with your friends on"
 
