@@ -34,7 +34,9 @@ DEFAULT_PAGINATION = 10
 MARKUP = ('md', 'ipynb')
 
 PLUGIN_PATH = ['./plugins','./pelican-plugins']
-PLUGINS = ['ipynb.markup','readtime','post_stats']
+PLUGINS = ['ipynb.markup','readtime','post_stats','tipue_search']
+# for search function, [plugin = tipue_search involved]
+DIRECT_TEMPLATES = ['search']
 #'share_post'
 IGNORE_FILES = [".ipynb_checkpoints"]
 STATIC_PATHS = ['img']
@@ -72,6 +74,8 @@ SOCIAL = (
 
 SOCIAL_PROFILE_LABEL = u'Stay in Touch'
 
+LANDING_PAGE_TITLE = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque eu tincidunt tortor aliquam nulla facilisi. Nibh tortor id aliquet lectus proin nibh nisl condimentum id. Lobortis feugiat vivamus at augue. Sed augue lacus viverra vitae congue eu consequat.'
+
 LANDING_PAGE_ABOUT = {
 "title":"I design mobile apps and work with data for getting insight",
 "details":"I am John Boby Mesadieu. I develope mobile apps for both apple and android os. Mainly I am data scientist who's aim is to play with for having as most insights as possible while having fun"
@@ -85,6 +89,8 @@ GOOGLE_ANALYTICS = u'UA-146174561-1'
 STAT_COUNTER_SECURITY = u'4138fb33'
 
 MAILCHIMP_FORM_ACTION = 'https://github.us8.list-manage.com/subscribe/post?u=517e9014963fd595cf3dbb7d4&amp;id=65134d64e7'
+EMAIL_SUBSCRIPTION_LABEL = 'Get New Release Alert'
+SUBSCRIBE_BUTTON_TITLE = 'Notify me'
 
 #SHARE_POST_INTRO = "Share me with your friends on"
 
