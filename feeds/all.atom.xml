@@ -2360,7 +2360,7 @@ Let go of the past. One of the biggest hindrances to personal growth is holding 
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="About"></category><category term="personal development"></category></entry><entry><title>First Jupyter Post</title><link href="https://JBobyM.github.io/first-jup-post.html" rel="alternate"></link><published>2019-06-08T20:00:00-04:00</published><updated>2019-06-08T20:00:00-04:00</updated><author><name>John Boby Mesadieu</name></author><id>tag:jbobym.github.io,2019-06-08:/first-jup-post.html</id><summary type="html">&lt;p&gt;My first jupyter notebook post, read it to find out.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+</content><category term="About"></category><category term="personal-development"></category></entry><entry><title>First Jupyter Post</title><link href="https://JBobyM.github.io/first-jup-post.html" rel="alternate"></link><published>2019-06-08T20:00:00-04:00</published><updated>2019-06-08T20:00:00-04:00</updated><author><name>John Boby Mesadieu</name></author><id>tag:jbobym.github.io,2019-06-08:/first-jup-post.html</id><summary type="html">&lt;p&gt;My first jupyter notebook post, read it to find out.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *

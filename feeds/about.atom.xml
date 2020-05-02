@@ -1192,7 +1192,7 @@ Let go of the past. One of the biggest hindrances to personal growth is holding 
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="About"></category><category term="personal development"></category></entry><entry><title>Description</title><link href="https://JBobyM.github.io/description.html" rel="alternate"></link><published>2018-06-08T20:00:00-04:00</published><updated>2018-06-08T20:00:00-04:00</updated><author><name>John Boby Mesadieu</name></author><id>tag:jbobym.github.io,2018-06-08:/description.html</id><content type="html">&lt;style type="text/css"&gt;/*!
+</content><category term="About"></category><category term="personal-development"></category></entry><entry><title>Description</title><link href="https://JBobyM.github.io/description.html" rel="alternate"></link><published>2018-06-08T20:00:00-04:00</published><updated>2018-06-08T20:00:00-04:00</updated><author><name>John Boby Mesadieu</name></author><id>tag:jbobym.github.io,2018-06-08:/description.html</id><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
