@@ -25,10 +25,6 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('Jinja2', 'http://jinja.pocoo.org/'),
          ('You can modify those links in your config file', '#'),)
 
-# Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
-
 DEFAULT_PAGINATION = 10
 
 MARKUP = ('md', 'ipynb')
@@ -67,14 +63,15 @@ AUTHORS = {
     },
 }
 
+# Social widget
 SOCIAL = (
 ('Twitter','https://twitter.com/jbobym','My Twitter account'),
-('Email', 'jbobyberry.com', 'My Email Address')
+('Email', 'jbobyberry@gmail.com', 'My Email Address')
 )
 
 SOCIAL_PROFILE_LABEL = u'Stay in Touch'
 
-LANDING_PAGE_TITLE = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque eu tincidunt tortor aliquam nulla facilisi. Nibh tortor id aliquet lectus proin nibh nisl condimentum id. Lobortis feugiat vivamus at augue. Sed augue lacus viverra vitae congue eu consequat.'
+LANDING_PAGE_TITLE = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque eu tincidunt tortor aliquam nulla facilisi.'
 
 LANDING_PAGE_ABOUT = {
 "title":"I design mobile apps and work with data for getting insight",
