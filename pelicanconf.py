@@ -71,12 +71,8 @@ SOCIAL = (
 
 SOCIAL_PROFILE_LABEL = u'Stay in Touch'
 
-LANDING_PAGE_TITLE = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque eu tincidunt tortor aliquam nulla facilisi.'
+LANDING_PAGE_TITLE = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
 
-LANDING_PAGE_ABOUT = {
-"title":"I design mobile apps and work with data for getting insight",
-"details":"I am John Boby Mesadieu. I develope mobile apps for both apple and android os. Mainly I am data scientist who's aim is to play with for having as most insights as possible while having fun"
-}
 APPLAUSE_BUTTON = True
 #FREELISTS_NAME = "elegant@freelists.org"
 
