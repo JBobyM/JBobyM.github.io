@@ -30,9 +30,9 @@ DEFAULT_PAGINATION = 10
 MARKUP = ('md', 'ipynb')
 
 PLUGIN_PATH = ['./plugins','./pelican-plugins']
-PLUGINS = ['ipynb.markup','readtime','post_stats', 'tipue_search']
+PLUGINS = ['ipynb.markup','readtime','post_stats', 'tipue_search','photos','assets']
 # for search function, [plugin = tipue_search involved]
-DIRECT_TEMPLATES = ['search','index','authors', 'categories', 'tags', 'archives']
+DIRECT_TEMPLATES = ['search','index','authors', 'categories', 'tags', 'archives','404']
 #'share_post'
 IGNORE_FILES = [".ipynb_checkpoints"]
 STATIC_PATHS = ['img']
@@ -71,7 +71,7 @@ SOCIAL = (
 
 SOCIAL_PROFILE_LABEL = u'Stay in Touch'
 
-LANDING_PAGE_TITLE = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+LANDING_PAGE_TITLE = 'Data science avec Python: comprendre. Implementer. Réussir.'
 
 APPLAUSE_BUTTON = True
 #FREELISTS_NAME = "elegant@freelists.org"
@@ -85,12 +85,12 @@ MAILCHIMP_FORM_ACTION = 'https://github.us8.list-manage.com/subscribe/post?u=517
 EMAIL_SUBSCRIPTION_LABEL = 'Get New Release Alert'
 SUBSCRIBE_BUTTON_TITLE = 'Notify me'
 
+PHOTO_RESIZE_JOBS = -1
+
 #SHARE_POST_INTRO = "Share me with your friends on"
 
-#LANDING_PAGE_TITLE = "I design and build software products for iOS and OSX"
 
-
-#SHARE_LINKS = [ ('twitter', 'Twitter'), ('facebook', 'Facebook'), ('email', 'Email') ]
+#SHARE_LINKS = [ ('twitter', 'Twitter'), ('facebook', 'Facebook'), ('email', 'Email'),('linkedin','LinkedIn') ]
 #SHARE_POST_INTRO = "Share me with your friends on"
 #share_post_intro= "Share this article on Elegant with"
 
