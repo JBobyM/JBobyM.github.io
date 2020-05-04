@@ -30,9 +30,9 @@ DEFAULT_PAGINATION = 10
 MARKUP = ('md', 'ipynb')
 
 PLUGIN_PATH = ['./plugins','./pelican-plugins']
-PLUGINS = ['ipynb.markup','readtime','post_stats']
+PLUGINS = ['ipynb.markup','readtime','post_stats', 'tipue_search']
 # for search function, [plugin = tipue_search involved]
-#DIRECT_TEMPLATES = ['search']
+DIRECT_TEMPLATES = ['search','index','authors', 'categories', 'tags', 'archives']
 #'share_post'
 IGNORE_FILES = [".ipynb_checkpoints"]
 STATIC_PATHS = ['img']
