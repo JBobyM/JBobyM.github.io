@@ -71,7 +71,7 @@ SOCIAL = (
 
 SOCIAL_PROFILE_LABEL = u'Stay in Touch'
 
-LANDING_PAGE_TITLE = 'Data science avec Python: comprendre. Implementer. Réussir.'
+LANDING_PAGE_TITLE = 'Data science avec Python & R: Comprendre. Implémenter. Réussir.'
 
 APPLAUSE_BUTTON = True
 #FREELISTS_NAME = "elegant@freelists.org"
