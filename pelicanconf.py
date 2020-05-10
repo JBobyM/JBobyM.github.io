@@ -35,7 +35,9 @@ PLUGINS = ['ipynb.markup','readtime','post_stats', 'tipue_search','photos','asse
 DIRECT_TEMPLATES = ['search','index','authors', 'categories', 'tags', 'archives','404']
 #'share_post'
 IGNORE_FILES = [".ipynb_checkpoints"]
-STATIC_PATHS = ['img']
+STATIC_PATHS = ['img','theme/images', 'images']
+
+USE_SHORTCUT_ICONS = True
 
 READING_TIME_LOWER_LIMIT = 3
 
