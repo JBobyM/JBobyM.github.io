@@ -40,7 +40,6 @@ STATIC_PATHS = ['img','theme/images', 'images']
 USE_SHORTCUT_ICONS = True
 
 READING_TIME_LOWER_LIMIT = 3
-
 THEME = "C:\\Users\\Kathee\\Documents\\Blog\\JBobyM.github.io\\pelican-themes\\elegant"
 
 # This part is for estimating the reading time
