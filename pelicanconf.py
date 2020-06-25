@@ -11,8 +11,8 @@ AUTHOR_LOWER = 'John Boby Mesadieu'
 AUTHOR_SHORTENED = 'JBobyM'
 AUTHOR_SUBTITLE = 'Data Scientist, full-stack mobile app developper, statistician-economist'
 SITENAME = 'DataSight'
-SITESUBTITLE = u'Istwa sou R avek Python pou data science ak Etatistik'
-SITE_DESCRIPTION = 'DataSight | Istwa sou R avek Python pou data science ak Etatistik'
+SITESUBTITLE = u'Stories about Python, R, Data Science and Statistics'
+SITE_DESCRIPTION = 'DataSight | Stories about Python, R, Data Science and Statistics'
 SITEURL = ''
 
 PATH = 'content'
@@ -39,6 +39,7 @@ SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = False
+USE_SHORTCUT_ICONS = True
 
 # Regional Settings
 DATE_FORMATS = {'en': '%b %d, %Y'}
