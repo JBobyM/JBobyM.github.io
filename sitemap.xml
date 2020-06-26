@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://jbobym.github.io/</loc>
-<lastmod>2020-06-26T10:53:47-00:00</lastmod>
+<lastmod>2020-06-26T12:30:07-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/archives.html</loc>
-<lastmod>2020-06-26T10:53:47-00:00</lastmod>
+<lastmod>2020-06-26T12:30:07-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/search.html</loc>
-<lastmod>2020-06-26T10:53:47-00:00</lastmod>
+<lastmod>2020-06-26T12:30:07-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/404.html</loc>
-<lastmod>2020-06-26T10:53:47-00:00</lastmod>
+<lastmod>2020-06-26T12:30:07-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/about.html</loc>
-<lastmod>2020-06-26T10:53:47-00:00</lastmod>
+<lastmod>2020-06-26T12:30:07-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -81,6 +81,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://jbobym.github.io/tag/data-enrichment.html</loc>
+<lastmod>2020-06-26T00:00:00-04:49</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://jbobym.github.io/tag/plot-importance.html</loc>
 <lastmod>2020-06-26T00:00:00-04:49</lastmod>
 <changefreq>daily</changefreq>
@@ -117,6 +124,20 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://jbobym.github.io/tag/python.html</loc>
+<lastmod>2020-06-26T00:00:00-04:49</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://jbobym.github.io/tag/web-scrapping.html</loc>
+<lastmod>2020-06-26T00:00:00-04:49</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://jbobym.github.io/tag/bilboard-year-end-hot-100.html</loc>
 <lastmod>2020-06-26T00:00:00-04:49</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
