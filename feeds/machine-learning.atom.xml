@@ -1149,7 +1149,7 @@ h6:hover .anchor-link {
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Des milliers de chansons voient le jour tous les ans dans le monde. Certaines connaissent de vrais succès dans l’industrie musicale ; d’autres le sont moins. Il est un fait que réussir dans cette industrie demeure une tâche difficile. Investir dans la production d’une chanson requiert des activités diversifiées et peuvent consommer beaucoup de ressources. Il n’y a aucun outil jusque-là automatique dont les artistes et producteurs pourraient s'en servir pour évaluer si leur chanson qu’ils sont sur le point de publier va se révéler 'hit’.&lt;/p&gt;
+&lt;p&gt;Des milliers de chansons voient le jour tous les ans dans le monde. Certaines connaissent de vrais succès dans l’industrie musicale ; d’autres le sont moins. Il est un fait que réussir dans cette industrie demeure une tâche difficile. Investir dans la production d’une chanson requiert des activités diversifiées et peuvent consommer beaucoup de ressources. Jusque-là, il n’y a aucun outil automatique dont les artistes et producteurs pourraient s'en servir pour évaluer si leur chanson qu’ils sont sur le point de publier va se révéler 'hit’.&lt;/p&gt;
 &lt;p&gt;Dans cet article, on cherchera à comprendre ce qui caractérise une chanson populaire, et plus précisement si l'on pourrait prédire la popularité d'une chanson seulement en nous basant sur ses caractéristiques d'audio et celles de l'artiste. Nous allons construire un modèle-classeur de machine learning pouvant classer une chanson en hit ou non-hit. Bien que des facteurs sociaux comme le contexte dans lequel la chanson a été diffusée, la démographie de ses auditeurs et l'effectivité de sa campagne de marketing peuvent tout aussi bien jouer un rôle important dans sa viralité, nous emettons l'hypothèse que les caractéristiques inhérentes à une chanson, tels que l'artiste qui l'interprète, sa duréee, ses caractéristiques d'audio peuvent être correlés et également révélateur de sa viralité.&lt;/p&gt;
 
 &lt;/div&gt;
@@ -2190,7 +2190,7 @@ Name: hit, dtype: int64&lt;/pre&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Si on essaie de comprendre la psychologie d'un producteur de musiques, l'erreur du type I est moins acceptable que celle de type II. On ne voudrait pas consentir toutes les dépenses liées à une musique qu'un modèle a prédit 'hit' pour que finalement elle ne l'est pas. La valeur de l'erreur du type I devrait être minimale. De manière générale, le modèle devrait être plus perfomant.&lt;/p&gt;
+&lt;p&gt;L'erreur de type I consiste en ce que le modèle classe une musique comme hit alors qu'elle est non-hit; et l'erreur de type II, l'inverse, c'est-à-dire le cas où il classe une musique comme non-hit pourtant elle est hit. Si on essaie de comprendre la psychologie d'un producteur de musiques, l'erreur de type I est moins acceptable que celle de type II. On ne voudrait pas consentir toutes les dépenses liées à la production et la promotion d'une musique qu'un modèle a prédit 'hit' pour que finalement elle ne l'est pas. La valeur de l'erreur du type I devrait être minimale. De manière générale, le modèle devrait être plus perfomant.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
