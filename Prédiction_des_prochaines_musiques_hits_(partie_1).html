@@ -1296,7 +1296,7 @@ h6:hover .anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Des milliers de chansons voient le jour tous les ans dans le monde. Certaines connaissent de vrais succès dans l’industrie musicale ; d’autres le sont moins. Il est un fait que réussir dans cette industrie demeure une tâche difficile. Investir dans la production d’une chanson requiert des activités diversifiées et peuvent consommer beaucoup de ressources. Jusque-là, il n’y a aucun outil automatique dont les artistes et producteurs pourraient s'en servir pour évaluer si leur chanson qu’ils sont sur le point de publier va se révéler 'hit’.</p>
-<p>Dans cet article, on cherchera à comprendre ce qui caractérise une chanson populaire, et plus précisement si l'on pourrait prédire la popularité d'une chanson seulement en nous basant sur ses caractéristiques d'audio et celles de l'artiste. Nous allons construire un modèle-classeur de machine learning pouvant classer une chanson en hit ou non-hit. Bien que des facteurs sociaux comme le contexte dans lequel la chanson a été diffusée, la démographie de ses auditeurs et l'effectivité de sa campagne de marketing peuvent tout aussi bien jouer un rôle important dans sa viralité, nous emettons l'hypothèse que les caractéristiques inhérentes à une chanson, tels que l'artiste qui l'interprète, sa duréee, ses caractéristiques d'audio peuvent être correlés et également révélateur de sa viralité.</p>
+<p>Dans cet article, on cherchera à comprendre ce qui caractérise une chanson populaire, et plus précisément si l'on pourrait prédire la popularité d'une chanson seulement en nous basant sur ses caractéristiques d'audio et celles de l'artiste. Nous allons construire un modèle-classeur de machine learning pouvant classer une chanson en hit ou non-hit. Bien que des facteurs sociaux comme le contexte dans lequel la chanson a été diffusée, la démographie de ses auditeurs et l'effectivité de sa campagne de marketing peuvent tout aussi bien jouer un rôle important dans sa viralité, nous émettons l'hypothèse que les caractéristiques inhérentes à une chanson, tels que l'artiste qui l'interprète, sa duréee, ses caractéristiques d'audio peuvent être correlés et également révélateur de sa viralité.</p>
 
 </div>
 </div>
@@ -1311,9 +1311,9 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Dans cet article de deux parties, nous allons construire un modèle de machine learning comme un classeur de chansons en hits et non-hits. Pour réussir un tel travail, plus nous avons de données pertinentes, mieux c'est. Etant donné qu’on n'a pas pu trouver un dataset venant d’une seule et unique source avec toutes les variables, il nous a fallu recourir au data enrichment à mesure que cela ait été nécessaire. Nous avons eu besoin de trois sources pour construire notre jeu de données. Et  l'opération de recueillement s'est déroulée de la manière suivante :</p>
+<p>Dans cet article biparti, nous allons construire un modèle de machine learning comme un classeur de chansons en hits et non-hits. Pour réussir un tel travail, plus nous avons de données pertinentes, mieux c'est. Etant donné qu’on n'a pas pu trouver un dataset venant d’une seule et unique source avec toutes les variables, il nous a fallu recourir au data enrichment à mesure que cela ait été nécessaire. Nous avons eu besoin de trois sources pour construire notre jeu de données. Et  l'opération de recueillement s'est déroulée de la manière suivante :</p>
 <ul>
-<li><u> Billboard </u> : On s'est servi de la page Wikipédia de <a href="https://en.wikipedia.org/wiki/Billboard_Year-End_Hot_100_singles_of_2019">Bilboard Year-End Hot 100</a> pour recueillir les musiques les plus populaires (hits) pour les années allant de 2010 à 2019. On a utilisé le web scrapping pour accomplir cette tâche.</li>
+<li><u> Billboard </u> : On s'est servi de la page Wikipédia de <a href="https://en.wikipedia.org/wiki/Billboard_Year-End_Hot_100_singles_of_2019">Billboard Year-End Hot 100</a> pour recueillir les musiques les plus populaires (hits) pour les années allant de 2010 à 2019. On a utilisé le web scrapping pour accomplir cette tâche.</li>
 </ul>
 <ul>
 <li><u> Spotify </u>: Ensuite on a utilisé la librairie <a href="https://spotipy.readthedocs.io/en/2.12.0/">Spotipy</a> pour récupérer les caractéristiques relatives à l’audio tels que la dansabilité, la vivacité, l'instrumentalité, etc. et à l’artiste comme la popularité, le nombre de followers etc. à la fois des chansons hits provenant du Billboard Year-End Hot 100 et d'autres chansons non-hits sur la période.</li>
@@ -1321,7 +1321,7 @@ h6:hover .anchor-link {
 <ul>
 <li><u> LyricsOnDemand </u>: Enfin <a href="https://www.lyricsondemand.com/">LyricsOnDemand</a> sera utilisé principalement pour récupérer les paroles des chansons.</li>
 </ul>
-<p>On considère qu’une musique de notre dataset est hit si elle a fait partie du classement du Billboard Year-End Hot 100 au moins une fois pendant l’une des années sur la période considérée. En d'autres termes, notre modèle aura pour mission de prédire si une chanson fera partie de la liste des 100 musiques les plus populaires de Bilboard ou non.</p>
+<p>On considère qu’une musique de notre dataset est hit si elle a fait partie du classement du Billboard Year-End Hot 100 au moins une fois pendant l’une des années sur la période considérée. En d'autres termes, notre modèle aura pour mission de prédire si une chanson fera partie de la liste des 100 musiques les plus populaires de Billboard ou non.</p>
 <p>Nous avons executé pas mal de lignes de codes afin de construire notre jeu de données. Tous les codes du projet sont accessibles depuis mon repositoire github qui est accessible <a href="https://github.com/JBobyM/Data-Science-Projects">ici</a>.</p>
 <h5 id="Outils:">Outils:<a class="anchor-link" href="#Outils:">&#182;</a></h5><ul>
 <li>La librairie Spotipy pour accéder aux données de la plateforme musicale de Spotify</li>
@@ -1343,8 +1343,8 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Spotify est l'une des plus grandes plateformes de streaming dans le monde. A l'instar de Twitter ou Facebook, elle fournit une API (Application Programming Interface) pour que les developpeurs puissent interagir avec son immense base de données musicale. Via des <em>endpoints</em> de cet API, j'ai pu recolleter des données pour plus de 22 000 chansons; chaque chanson étant caracterisée par à peu près une vingtaine de variables.</p>
-<p>Les variables retournées par l'API sont aussi riches en information que variées. Toutefois, j'ai selectionné uniquement celles qui sont jugées pertinentes pour le travail. Ensuite, elles ont été transformées via les techniques de feature engineering afin de préparer le jeu de données au mieux pour l'entraînement du modèle. Vous trouverez ci-dessous le nom et la déscription de chaque variable utilisée.</p>
+<p>Spotify est l'une des plus grandes plateformes de streaming dans le monde. A l'instar de Twitter ou Facebook, elle fournit une API (Application Programming Interface) pour que les developpeurs puissent interagir avec son immense base de données musicale. Via des <em>endpoints</em> de cet API, j'ai pu collecter des données pour plus de 22 000 chansons; chaque chanson étant caracterisée par à peu près une vingtaine de variables.</p>
+<p>Les variables retournées par l'API sont aussi riches en information que variées. Toutefois, j'ai selectionné uniquement celles qui sont jugées pertinentes pour le travail. Ensuite, elles ont été transformées via les techniques de feature engineering afin de préparer le jeu de données au mieux pour l'entraînement du modèle. Vous trouverez ci-dessous le nom et la description de chaque variable utilisée.</p>
 
 </div>
 </div>
@@ -1363,7 +1363,7 @@ h6:hover .anchor-link {
 <p><strong>Acoustique</strong> : Une mesure de confiance de 0.0 à 1.0 indiquant si la chanson est acoustique. 1.0 représente une confiance élevée que la chanson est acoustique.</p>
 <p><strong>Dansabilité</strong> : La dansabilité décrit à quel point une chanson est adaptée à la danse sur la base d'une combinaison d'éléments musicaux, notamment le tempo, la stabilité du rythme, la force du rythme et la régularité globale. Une valeur de 0.0 est la moins dansante et 1.0 est la plus dansante.</p>
 <p><strong>Energie</strong>: L'énergie est une mesure de 0.0 à 1.0 et représente une mesure perceptuelle de l'intensité et de l'activité. En règle générale, les chansons énergiques sont rapides, sonores et bruyantes.</p>
-<p><strong>Instrumentalité</strong> : Prédit si une chanson ne contient pas de voix. Les sons «Ooh» et «aah» sont traités comme instrumentaux dans ce contexte. Les morceaux de rap ou de mots parlés sont clairement «vocaux». Plus la valeur instrumentale est proche de 1.0, plus la piste ne contient aucun contenu vocal. Les valeurs supérieures à 0.5 sont censées représenter des chansons instrumentales, mais la confiance est plus élevée lorsque la valeur approche de 1.0.</p>
+<p><strong>Instrumentalité</strong> : Celle-ci prédit si une chanson ne contient pas de voix. Les sons «Ooh» et «aah» sont traités comme instrumentaux dans ce contexte. Les morceaux de rap ou de mots parlés sont clairement «vocaux». Plus la valeur instrumentale est proche de 1.0, plus la piste ne contient aucun contenu vocal. Les valeurs supérieures à 0.5 sont censées représenter des chansons instrumentales, mais la confiance est plus élevée lorsque la valeur approche de 1.0.</p>
 <p><strong>Vivacité</strong> : Détecte la présence d'un public dans l'enregistrement. Des valeurs de vivacité plus élevées représentent une probabilité accrue que la chanson ait été jouée en direct. Une valeur supérieure à 0.8 offre une forte probabilité que la chanson soit en direct.</p>
 <p><strong>Intensité</strong> : L'intensité global d'une chanson en décibels (dB). Les valeurs d'intensité sont moyennées sur toute la chanson et sont utiles pour comparer l'intensité relative des chansons. L'intensité sonore est la qualité d'un son qui est le principal corrélat psychologique de la force physique (amplitude). Les valeurs varient entre -60 et 0 db.</p>
 <p><strong>Eloquence</strong> : L'éloqunece détecte la présence de mots prononcés dans une chanson. Plus l'enregistrement est exclusivement vocal (par exemple, talk-show, livre audio, poésie), plus la valeur d'attribut est proche de 1.0. Les valeurs supérieures à 0.66 décrivent des chansons qui sont probablement entièrement constituées de mots prononcés. Les valeurs comprises entre 0.33 et 0.66 décrivent des pistes qui peuvent contenir à la fois de la musique et de la parole, soit en sections, soit en couches, y compris des cas comme la musique rap. Les valeurs inférieures à 0.33 représentent très probablement de la musique et d'autres pistes non vocales.</p>
@@ -1372,7 +1372,7 @@ h6:hover .anchor-link {
 <p><strong>hit</strong> : Variable dichotomique mesurant si une chanson est hit ou non. Elle prend la valeur de 1 si la chanson est hit, 0 sinon. C'est notre variable dépendante, c'est-à-dire celle que l'on cherchera à prédire pour une chanson donnée.</p>
 <p><strong>featuring</strong> : Variable dépendante dichotomique mesurant s'il y a un ou plusieurs artistes invités sur une chanson.</p>
 <p><strong>mois</strong> : Mois de sortie de la chanson.</p>
-<p><strong>jour_sem</strong> : Jour de la semaine durant lequel la chanson a ete diffusee.</p>
+<p><strong>jour_sem</strong> : Jour de la semaine durant lequel la chanson a été diffusée.</p>
 <p><strong>jour</strong> : Jour de sortie de la chanson.</p>
 
 </div>
@@ -1381,7 +1381,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Certaines de ces variables sont utilisées uniquement pour l'analyse, d'autres participent à toutes les étapes du pipeline. A présent, jettons un coup d'oeil sur la dimension de notre jeu de données.</p>
+<p>Certaines de ces variables sont utilisées uniquement pour l'analyse, d'autres participent à toutes les étapes du pipeline. A présent, jetons un coup d'oeil sur la dimension de notre jeu de données.</p>
 
 </div>
 </div>
@@ -1422,7 +1422,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Après avoir choisi les variables disponibles jugées pertinentes pour le modèle, supprimé les observations contenant des valeurs manquantes et les duplications, notre jeu est réduit à 19 120 observations contenant 24 variables chacune. Les 5 premières observations de notre jeu sont les suivantes.</p>
+<p>Après avoir choisi les variables disponibles jugées pertinentes pour le modèle, supprimé les observations contenant des valeurs manquantes et les duplications, notre jeu est réduit à 19 120 observations contenant 24 variables chacune. Les 5 premières observations de notre jeu sont les suivantes:</p>
 
 </div>
 </div>
@@ -1741,8 +1741,8 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A la lumière du graphique ci-dessus, janvier est le mois durant lequel plus de musiques hits sont sorties; juillet étant le mois le moins solicité. On remarque aussi que la majorité des hits de la période sont sortis le 4ème jour de la semaine; soit jeudi. Enfin le premier jour du mois est largement plus utilisé pour publier une chanson.</p>
-<p>Fort de ce constat, on peut déduire que publier une chanson le premier janvier, c'est probablement un pas vers l'optimisation des chances de sa viralité. On doit tout de même être prudent, corrélation n'est pas causalité. Il faudrait pousser notre analyse plus en profondeur afin d'être plus précis dans cette conclusion.</p>
+<p>A la lumière du graphique ci-dessus, janvier est le mois durant lequel plus de musiques hits sont sorties; juillet étant le mois le moins sollicité. On remarque aussi que la majorité des hits de la période sont sortis le 4ème jour de la semaine; soit jeudi. Enfin le premier jour du mois est largement plus utilisé pour publier une chanson.</p>
+<p>Fort de ce constat, on pourrait déduire que publier une chanson le premier janvier, c'est probablement un pas vers l'optimisation des chances de sa viralité. On doit tout de même être prudent: corrélation n'est pas causalité. Il faudrait pousser notre analyse plus en profondeur afin d'être plus précis dans cette conclusion.</p>
 
 </div>
 </div>
@@ -1928,7 +1928,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Les variables prédominantes au sein des deux catégories sont les mêmes : <strong>energie</strong>, <strong>dansabilité</strong> et <strong>valence</strong>. La seule difference est que les valeurs moyennées de ces variables sont plus élevées pour la catégorie des chansons hits. Ceci atteste que les musiques hits sont plus rapides et sonores. Elles sont plus adaptées à la danse et sont plus enclines à inspirer la joie, la gaité, l'euphorie.</p>
+<p>Les variables prédominantes au sein des deux catégories sont les mêmes : <strong>energie</strong>, <strong>dansabilite</strong> et <strong>valence</strong>. La seule difference est que les valeurs moyennées de ces variables sont plus élevées pour la catégorie des chansons hits. Ceci atteste que les musiques hits sont plus rapides et sonores. Elles sont plus adaptées à la danse et sont plus enclines à inspirer la joie, la gaité, l'euphorie.</p>
 
 </div>
 </div>
@@ -1943,7 +1943,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Jusque-là, nous avons pu découvrir quelques interéssants insights à propos des données. Afin d'écourter cet article, passons directement en la partie concernant l'algorithme de machine learning que nous allons utiliser. Nous allons construire un modèle afin de prédire la classe, hit ou non-hit, qu'une musique est la plus susceptible d'appartenir en nous basant sur un ensemble de variables explicatives, comme expliqué au début.</p>
+<p>Jusque-là, nous avons pu découvrir quelques interéssants insights à propos des données. Afin d'écourter cet article, passons directement à la partie concernant l'algorithme de machine learning que nous allons utiliser. Nous allons construire un modèle afin de prédire la classe, hit ou non-hit, qu'une musique est la plus susceptible d'appartenir en nous basant sur un ensemble de variables explicatives, comme expliqué au début.</p>
 <p>Il est important de garder en tête que nous voulons un modèle qui soit le plus performant possible. Nous allons utiliser l'algorithme de classification de <strong>LightGBM</strong>. Pourquoi? J'ai découvert ce framework récemment alors que je participais à une compétition sur Kaggle. Ses résultats sont robustes. Il est largement utilisé dans de <a href="https://github.com/microsoft/LightGBM/blob/master/examples/README.md#machine-learning-challenge-winning-solutions">nombreuses solutions gagnantes</a> de concours de machine learning.</p>
 <p>En guise d'expliquer comment l'algorithme fonctionne, on se contentera de mentionner que c'est une approche de machine learning supervisé que l'on va utiliser et que <strong>LightGBM</strong> est un framework de <em>gradient boosting</em> qui utilise des algorithmes d'apprentissage basés sur des arbres. Il est conçu pour être distribué et efficient avec les avantages suivants:</p>
 <ul>
@@ -2001,7 +2001,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A ce stade on recourt à plusieurs techniques afin d'optimiser notre jeu de données. En realité, on en a déjà appliqué quelques-unes au début lorsqu'il était question de gérer les valeurs manquantes, les dupplications, l'extraction des dates, One-Hot-Encoding, etc. A présent nous allons appliquer la technique dite <em>scaling</em> sur quelques variables du jeu. Cette technique a la vertu de mettre toutes les variables numériques quantitatives sur une même base comparable. Bien, à quoi ressemble notre jeu maintenant?</p>
+<p>A ce stade, on recourt à plusieurs techniques afin d'optimiser notre jeu de données. En realité, on en a déjà appliqué quelques-unes au début lorsqu'il était question de gérer les valeurs manquantes, les dupplications, l'extraction des dates, One-Hot-Encoding, etc. A présent nous allons appliquer la technique dite <em>scaling</em> sur quelques variables du jeu. Cette technique a la vertu de mettre toutes les variables numériques quantitatives sur une même base comparable. Bien, à quoi ressemble notre jeu maintenant?</p>
 
 </div>
 </div>
@@ -2133,7 +2133,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Vueillez remarquer que toutes les variables quantitatives indépendantes sont comprises dans l'intervalle [0,1]. Dans la réalité, cela ne fait aucun sens qu'une variable tel que <em>tot_followers</em> par exemple contienne des valeurs entre 0 et 1. Mais du point de vue de l'algorithme, cela a tout son sens car c'est par ce procédé que les variables deviennent comparables. Les algorithmes de machine learning fonctionnent mieux lorsque les variables indépendantes sont relativement à une échelle similaire et proches de la distribution normale.</p>
+<p>Veuillez remarquer que toutes les variables quantitatives indépendantes sont comprises dans l'intervalle [0,1]. Dans la réalité, cela ne fait aucun sens qu'une variable tel que <em>tot_followers</em>, par exemple, contienne des valeurs entre 0 et 1. Mais du point de vue de l'algorithme, cela a tout son sens car c'est par ce procédé que les variables deviennent comparables. Les algorithmes de machine learning fonctionnent mieux lorsque les variables indépendantes sont relativement à une échelle similaire et proches de la distribution normale.</p>
 
 </div>
 </div>
@@ -2148,7 +2148,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Rappelons-nous qu'au regard de la variable dépendante, notre jeu de données est très déséquilibré. La catégorie hit est sous-représentée par rapport à la classe non-hit. Pour y remédier, nous allons recourir à la téchinque dite SMOTE. SMOTE (Synthetic Minority Over-Sampling TEchnique) est une technique utilisée pour traiter des ensembles de données déséquilibrées. Introduite pour la première fois par Nitesh V. Chawla, SMOTE est une technique basée sur les plus proches voisins avec une distance euclidienne entre les points de données dans l’espace des caractéristiques.</p>
+<p>Rappelons-nous qu'au regard de la variable dépendante, notre jeu de données est très déséquilibré. La catégorie hit est sous-représentée par rapport à la classe non-hit. Pour y remédier, nous allons recourir à la technique dite SMOTE. SMOTE (Synthetic Minority Over-Sampling TEchnique) est une technique utilisée pour traiter des ensembles de données déséquilibrées. Introduite pour la première fois par Nitesh V. Chawla, SMOTE est une technique basée sur les plus proches voisins avec une distance euclidienne entre les points de données dans l’espace des caractéristiques.</p>
 
 </div>
 </div>
@@ -2580,7 +2580,7 @@ Name: hit, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Dans cette première partie de l'article, on a construit un modèle pouvant classer une chanson en hit ou non-hit suivant des variables lui étant propres. De notre analyse il faut retenir ceci: esentiellement, une chanson est hit si elle populaire sur Spotify, est interpretée par un artiste lui-même populaire sur Spotify et possède un nombre important de followers, et enfin si elle est disponible dans le plus grand nombre de pays à travers le monde. Cette conclusion me semble logique, mais elle est aussi vérifée empiriquement par notre modèle.</p>
+<p>Dans cette première partie de l'article, on a construit un modèle pouvant classer une chanson en hit ou non-hit suivant des variables lui étant propres. De notre analyse il faut retenir ceci: essentiellement, une chanson est hit si elle est populaire sur Spotify, est interpretée par un artiste lui-même populaire sur Spotify et possède un nombre important de followers, et enfin, si elle est disponible dans le plus grand nombre de pays à travers le monde. Cette conclusion me semble logique, mais elle est aussi vérifée empiriquement par notre modèle.</p>
 
 </div>
 </div>
