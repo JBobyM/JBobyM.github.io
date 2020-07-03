@@ -1149,8 +1149,8 @@ h6:hover .anchor-link {
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Des milliers de chansons voient le jour tous les ans dans le monde. Certaines connaissent de vrais succès dans l’industrie musicale ; d’autres le sont moins. Il est un fait que réussir dans cette industrie demeure une tâche difficile. Investir dans la production d’une chanson requiert des activités diversifiées et peuvent consommer beaucoup de ressources. Jusque-là, il n’y a aucun outil automatique dont les artistes et producteurs pourraient s'en servir pour évaluer si leur chanson qu’ils sont sur le point de publier va se révéler 'hit’.&lt;/p&gt;
-&lt;p&gt;Dans cet article, on cherchera à comprendre ce qui caractérise une chanson populaire, et plus précisément si l'on pourrait prédire la popularité d'une chanson seulement en nous basant sur ses caractéristiques d'audio et celles de l'artiste. Nous allons construire un modèle-classeur de machine learning pouvant classer une chanson en hit ou non-hit. Bien que des facteurs sociaux comme le contexte dans lequel la chanson a été diffusée, la démographie de ses auditeurs et l'effectivité de sa campagne de marketing peuvent tout aussi bien jouer un rôle important dans sa viralité, nous émettons l'hypothèse que les caractéristiques inhérentes à une chanson, tels que l'artiste qui l'interprète, sa duréee, ses caractéristiques d'audio peuvent être correlés et également révélateur de sa viralité.&lt;/p&gt;
+&lt;p&gt;Des milliers de chansons voient le jour tous les ans dans le monde. Certaines connaissent de vrais succès dans l’industrie musicale ; d’autres moins. Il est un fait que réussir dans cette industrie demeure une tâche difficile. Investir dans la production d’une chanson requiert des activités diversifiées et peuvent consommer beaucoup de ressources. Jusque-là, il n’y a aucun outil automatique qui permettrait aux artistes et aux producteurs d’évaluer que la chanson qu’ils vont publier sera un « hit musical ».&lt;/p&gt;
+&lt;p&gt;Dans cet article, nous chercherons à comprendre ce qui caractérise une chanson populaire, et plus précisément comment il serait possible de prédire la popularité d'une chanson en nous basant uniquement sur ces caractéristiques d'audio et sur le profil de l'artiste. Pour répondre à cette question, nous allons construire un modèle-classeur de machine learning pouvant classer une chanson en hit ou non-hit. Bien que des facteurs sociaux comme le contexte dans lequel la chanson a été diffusée, la démographie de ses auditeurs et l'effectivité de sa campagne de marketing peuvent tout aussi bien jouer un rôle important dans sa viralité, nous émettons l'hypothèse que les caractéristiques inhérentes à une chanson, tels que l'artiste qui l'interprète, sa durée, ses caractéristiques d'audio peuvent être corrélés et également révélateur de sa viralité.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1165,23 +1165,32 @@ h6:hover .anchor-link {
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Dans cet article biparti, nous allons construire un modèle de machine learning comme un classeur de chansons en hits et non-hits. Pour réussir un tel travail, plus nous avons de données pertinentes, mieux c'est. Etant donné qu’on n'a pas pu trouver un dataset venant d’une seule et unique source avec toutes les variables, il nous a fallu recourir au data enrichment à mesure que cela ait été nécessaire. Nous avons eu besoin de trois sources pour construire notre jeu de données. Et  l'opération de recueillement s'est déroulée de la manière suivante :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;u&gt; Billboard &lt;/u&gt; : On s'est servi de la page Wikipédia de &lt;a href="https://en.wikipedia.org/wiki/Billboard_Year-End_Hot_100_singles_of_2019"&gt;Billboard Year-End Hot 100&lt;/a&gt; pour recueillir les musiques les plus populaires (hits) pour les années allant de 2010 à 2019. On a utilisé le web scrapping pour accomplir cette tâche.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;u&gt; Spotify &lt;/u&gt;: Ensuite on a utilisé la librairie &lt;a href="https://spotipy.readthedocs.io/en/2.12.0/"&gt;Spotipy&lt;/a&gt; pour récupérer les caractéristiques relatives à l’audio tels que la dansabilité, la vivacité, l'instrumentalité, etc. et à l’artiste comme la popularité, le nombre de followers etc. à la fois des chansons hits provenant du Billboard Year-End Hot 100 et d'autres chansons non-hits sur la période.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;u&gt; LyricsOnDemand &lt;/u&gt;: Enfin &lt;a href="https://www.lyricsondemand.com/"&gt;LyricsOnDemand&lt;/a&gt; sera utilisé principalement pour récupérer les paroles des chansons.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;On considère qu’une musique de notre dataset est hit si elle a fait partie du classement du Billboard Year-End Hot 100 au moins une fois pendant l’une des années sur la période considérée. En d'autres termes, notre modèle aura pour mission de prédire si une chanson fera partie de la liste des 100 musiques les plus populaires de Billboard ou non.&lt;/p&gt;
-&lt;p&gt;Nous avons executé pas mal de lignes de codes afin de construire notre jeu de données. Tous les codes du projet sont accessibles depuis mon repositoire github qui est accessible &lt;a href="https://github.com/JBobyM/Data-Science-Projects"&gt;ici&lt;/a&gt;.&lt;/p&gt;
-&lt;h5 id="Outils:"&gt;Outils:&lt;a class="anchor-link" href="#Outils:"&gt;&amp;#182;&lt;/a&gt;&lt;/h5&gt;&lt;ul&gt;
-&lt;li&gt;La librairie Spotipy pour accéder aux données de la plateforme musicale de Spotify&lt;/li&gt;
-&lt;li&gt;Seaborn et matplotlib pour la visualisation des données&lt;/li&gt;
-&lt;li&gt;Pandas et numpy pour l'analyse des données&lt;/li&gt;
-&lt;li&gt;Scikit-learn pour la construction du modèle de machine learning&lt;/li&gt;
+&lt;p&gt;Plus nous avons de données pertinentes, mieux sera la capacité prédictive de notre modèle. Nous n’avons pas pu disposer d’un dataset venant d’une seule et unique source qui comporterait toutes les variables. Alors, il nous a fallu recourir aux techniques de « data enrichment ». Notre jeu de données a été construit à partir de trois (3) sources de données en suivant la méthode suivante :&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;&lt;img src="jupyter_images/classeur_partie_1_pipeline_.jpg" alt=""&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Nous avons utilisé la page Wikipédia de &lt;a href="https://en.wikipedia.org/wiki/Billboard_Year-End_Hot_100_singles_of_2019"&gt;Billboard Year-End Hot 100&lt;/a&gt; pour recueillir les musiques les plus populaires (hits) datant de 2010 à 2019. On a utilisé le web scrapping pour accomplir cette tâche.&lt;/p&gt;
+&lt;p&gt;Ensuite, nous avons utilisé le package &lt;a href="https://spotipy.readthedocs.io/en/2.12.0/"&gt;Spotipy&lt;/a&gt; pour récupérer les caractéristiques relatives, d'une part, à l’audio telles que la dansabilité, la vivacité, l'instrumentalité, etc; et d'autre part, à l’artiste comme la popularité, le nombre de followers etc. pour des chansons hits provenant du Billboard Year-End Hot 100 et d'autres chansons non-hits de la même période.&lt;/p&gt;
+&lt;p&gt;Et enfin, &lt;a href="https://genius.com/"&gt;Genius&lt;/a&gt; sera utilisé principalement pour la récupération des paroles des chansons que nous avons recueillies.&lt;/p&gt;
+&lt;p&gt;Une musique de notre dataset est considérée comme un « hit » si elle a fait partie du classement du Billboard Year-End Hot 100 au moins une fois pendant l’une des années sur la période considérée. En d'autres termes, notre modèle aura pour mission de prédire si une chanson fera partie de la liste des 100 musiques les plus populaires de Billboard ou non.&lt;/p&gt;
+&lt;p&gt;Notre jeu de données est construit à partir d'un programme Python, utilisant des packages de data science parmi les plus utilisés. Tous les codes du projet sont accessibles &lt;a href="https://github.com/JBobyM/Data-Science-Projects"&gt;ici&lt;/a&gt;.&lt;/p&gt;
+&lt;h5 id="Outils-utilis&amp;#233;s:"&gt;Outils utilis&amp;#233;s:&lt;a class="anchor-link" href="#Outils-utilis&amp;#233;s:"&gt;&amp;#182;&lt;/a&gt;&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;Le package spotipy pour accéder aux données de la plateforme musicale de Spotify&lt;/li&gt;
+&lt;li&gt;seaborn et matplotlib pour la visualisation des données&lt;/li&gt;
+&lt;li&gt;pandas et numpy pour l'analyse des données&lt;/li&gt;
+&lt;li&gt;La librairie scikit-learn pour la construction du modèle de machine learning&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;/div&gt;
@@ -1197,7 +1206,7 @@ h6:hover .anchor-link {
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Spotify est l'une des plus grandes plateformes de streaming dans le monde. A l'instar de Twitter ou Facebook, elle fournit une API (Application Programming Interface) pour que les developpeurs puissent interagir avec son immense base de données musicale. Via des &lt;em&gt;endpoints&lt;/em&gt; de cet API, j'ai pu collecter des données pour plus de 22 000 chansons; chaque chanson étant caracterisée par à peu près une vingtaine de variables.&lt;/p&gt;
+&lt;p&gt;Spotify est l'une des plus grandes plateformes de streaming dans le monde. A l'instar de Twitter ou Facebook, elle fournit une API (Application Programming Interface) pour que les developpeurs puissent interagir avec son immense base de données musicale. Via des &lt;em&gt;endpoints&lt;/em&gt; de cet API, j'ai pu récolter des données pour plus de 22 000 chansons; chaque chanson étant caracterisée par environ une vingtaine de variables.&lt;/p&gt;
 &lt;p&gt;Les variables retournées par l'API sont aussi riches en information que variées. Toutefois, j'ai selectionné uniquement celles qui sont jugées pertinentes pour le travail. Ensuite, elles ont été transformées via les techniques de feature engineering afin de préparer le jeu de données au mieux pour l'entraînement du modèle. Vous trouverez ci-dessous le nom et la description de chaque variable utilisée.&lt;/p&gt;
 
 &lt;/div&gt;
@@ -1219,7 +1228,7 @@ h6:hover .anchor-link {
 &lt;p&gt;&lt;strong&gt;Energie&lt;/strong&gt;: L'énergie est une mesure de 0.0 à 1.0 et représente une mesure perceptuelle de l'intensité et de l'activité. En règle générale, les chansons énergiques sont rapides, sonores et bruyantes.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Instrumentalité&lt;/strong&gt; : Celle-ci prédit si une chanson ne contient pas de voix. Les sons «Ooh» et «aah» sont traités comme instrumentaux dans ce contexte. Les morceaux de rap ou de mots parlés sont clairement «vocaux». Plus la valeur instrumentale est proche de 1.0, plus la piste ne contient aucun contenu vocal. Les valeurs supérieures à 0.5 sont censées représenter des chansons instrumentales, mais la confiance est plus élevée lorsque la valeur approche de 1.0.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Vivacité&lt;/strong&gt; : Détecte la présence d'un public dans l'enregistrement. Des valeurs de vivacité plus élevées représentent une probabilité accrue que la chanson ait été jouée en direct. Une valeur supérieure à 0.8 offre une forte probabilité que la chanson soit en direct.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Intensité&lt;/strong&gt; : L'intensité global d'une chanson en décibels (dB). Les valeurs d'intensité sont moyennées sur toute la chanson et sont utiles pour comparer l'intensité relative des chansons. L'intensité sonore est la qualité d'un son qui est le principal corrélat psychologique de la force physique (amplitude). Les valeurs varient entre -60 et 0 db.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Intensité&lt;/strong&gt; : L'intensité globale d'une chanson en décibels (dB). Les valeurs d'intensité sont moyennées sur toute la chanson et sont utiles pour comparer l'intensité relative des chansons. L'intensité sonore est la qualité d'un son qui est le principal corrélat psychologique de la force physique (amplitude). Les valeurs varient entre -60 et 0 db.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Eloquence&lt;/strong&gt; : L'éloqunece détecte la présence de mots prononcés dans une chanson. Plus l'enregistrement est exclusivement vocal (par exemple, talk-show, livre audio, poésie), plus la valeur d'attribut est proche de 1.0. Les valeurs supérieures à 0.66 décrivent des chansons qui sont probablement entièrement constituées de mots prononcés. Les valeurs comprises entre 0.33 et 0.66 décrivent des pistes qui peuvent contenir à la fois de la musique et de la parole, soit en sections, soit en couches, y compris des cas comme la musique rap. Les valeurs inférieures à 0.33 représentent très probablement de la musique et d'autres pistes non vocales.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Valence&lt;/strong&gt; : Une mesure de 0.0 à 1.0 décrivant la positivité musicale véhiculée par une chanson. Les chansons avec une valence élevée semblent plus positives (par exemple, joyeuses, gaies, euphoriques), tandis que les chansons avec une valence basse semblent plus négatives (par exemple tristes, déprimées, en colère).&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Tempo&lt;/strong&gt; : Le tempo global estimé d'une chanson en battements par minute (BPM). Dans la terminologie musicale, le tempo est la vitesse ou le rythme d'une pièce donnée et découle directement de la durée moyenne des temps.&lt;/p&gt;
@@ -1490,8 +1499,7 @@ h6:hover .anchor-link {
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[4]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#%%capture&lt;/span&gt;
-&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;matplotlib&lt;/span&gt; inline
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;matplotlib&lt;/span&gt; inline
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;matplotlib&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;pyplot&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;
 
 &lt;span class="n"&gt;fig&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;figsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
@@ -1543,7 +1551,7 @@ h6:hover .anchor-link {
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;La distribution de la variable dépendante hit est telle que seulement 902 chansons du jeu de données sont hits, alors que 18280 ne le sont pas. Il y a lieu de contaster un déséquilibre flagrant au sein de notre variable d'interêt. On règlera ce souci plus tard avant de passer à la phase d'entraînement de notre modèle.&lt;/p&gt;
+&lt;p&gt;La distribution de la variable dépendante hit est telle que seulement 902 chansons du jeu de données sont hits, alors que 18280 ne le sont pas. Il y a lieu de contraster un déséquilibre flagrant au sein de notre variable d'intérêt. On règlera ce souci plus tard avant de passer à la phase d'entraînement de notre modèle.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1553,8 +1561,7 @@ h6:hover .anchor-link {
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[5]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#%%capture&lt;/span&gt;
-&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="p"&gt;,(&lt;/span&gt;&lt;span class="n"&gt;ax1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ax2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ax3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplots&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;figsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;18&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="p"&gt;,(&lt;/span&gt;&lt;span class="n"&gt;ax1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ax2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ax3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplots&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;figsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;18&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;suptitle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Date de sortie des musiques hits&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;ax1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Mois&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;ax1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hist&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;hit&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;mois_sortie&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;bins&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;blue&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1614,8 +1621,7 @@ h6:hover .anchor-link {
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[6]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#%%capture&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;figsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;figsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;span class="n"&gt;artistes&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;hit&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;nom_artiste&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;value_counts&lt;/span&gt;&lt;span class="p"&gt;()[:&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="n"&gt;artistes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;kind&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;bar&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;blue&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Les artistes avec le plus de musiques hits&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1662,8 +1668,7 @@ h6:hover .anchor-link {
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[7]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#%%capture&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;figsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;figsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hist&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;hit&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;pop_artiste&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;bins&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;density&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;hit&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;blue&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hist&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;hit&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;pop_artiste&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;bins&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;density&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;non-hit&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;red&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Popularité des artistes&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1709,7 +1714,7 @@ h6:hover .anchor-link {
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Quid de la répartitition des variables d'audio au sein des deux catégories?&lt;/p&gt;
+&lt;p&gt;Quid de la répartition des variables d'audio au sein des deux catégories?&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1719,8 +1724,7 @@ h6:hover .anchor-link {
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[8]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#%%capture&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;matplotlib&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;pyplot&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;
 
 &lt;span class="n"&gt;features_hit&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;hit&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;,[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;acoustique&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;dansabilite&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;energie&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;instrumentalite&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;vivacite&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;eloquence&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;valence&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
@@ -1782,7 +1786,7 @@ h6:hover .anchor-link {
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Les variables prédominantes au sein des deux catégories sont les mêmes : &lt;strong&gt;energie&lt;/strong&gt;, &lt;strong&gt;dansabilite&lt;/strong&gt; et &lt;strong&gt;valence&lt;/strong&gt;. La seule difference est que les valeurs moyennées de ces variables sont plus élevées pour la catégorie des chansons hits. Ceci atteste que les musiques hits sont plus rapides et sonores. Elles sont plus adaptées à la danse et sont plus enclines à inspirer la joie, la gaité, l'euphorie.&lt;/p&gt;
+&lt;p&gt;Les variables prédominantes au sein des deux catégories sont les mêmes : &lt;strong&gt;energie&lt;/strong&gt;, &lt;strong&gt;dansabilite&lt;/strong&gt; et &lt;strong&gt;valence&lt;/strong&gt;. La seule différence est que les valeurs moyennées de ces variables sont plus élevées pour la catégorie des chansons hits. Ceci atteste que les musiques hits sont plus rapides et sonores. Elles sont plus adaptées à la danse et sont plus enclines à inspirer la joie, la gaité, l'euphorie.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1797,9 +1801,9 @@ h6:hover .anchor-link {
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Jusque-là, nous avons pu découvrir quelques interéssants insights à propos des données. Afin d'écourter cet article, passons directement à la partie concernant l'algorithme de machine learning que nous allons utiliser. Nous allons construire un modèle afin de prédire la classe, hit ou non-hit, qu'une musique est la plus susceptible d'appartenir en nous basant sur un ensemble de variables explicatives, comme expliqué au début.&lt;/p&gt;
-&lt;p&gt;Il est important de garder en tête que nous voulons un modèle qui soit le plus performant possible. Nous allons utiliser l'algorithme de classification de &lt;strong&gt;LightGBM&lt;/strong&gt;. Pourquoi? J'ai découvert ce framework récemment alors que je participais à une compétition sur Kaggle. Ses résultats sont robustes. Il est largement utilisé dans de &lt;a href="https://github.com/microsoft/LightGBM/blob/master/examples/README.md#machine-learning-challenge-winning-solutions"&gt;nombreuses solutions gagnantes&lt;/a&gt; de concours de machine learning.&lt;/p&gt;
-&lt;p&gt;En guise d'expliquer comment l'algorithme fonctionne, on se contentera de mentionner que c'est une approche de machine learning supervisé que l'on va utiliser et que &lt;strong&gt;LightGBM&lt;/strong&gt; est un framework de &lt;em&gt;gradient boosting&lt;/em&gt; qui utilise des algorithmes d'apprentissage basés sur des arbres. Il est conçu pour être distribué et efficient avec les avantages suivants:&lt;/p&gt;
+&lt;p&gt;Jusque-là, nous avons pu découvrir quelques insights interéssants à propos des données. Afin d'écourter cet article, passons directement à la partie concernant l'algorithme de machine learning que nous allons utiliser. Nous allons construire un modèle afin de prédire la classe, hit ou non-hit, qu'une musique est la plus susceptible d'appartenir en nous basant sur un ensemble de variables explicatives, comme expliqué au début de cet article.&lt;/p&gt;
+&lt;p&gt;Il est important de garder en tête que nous voulons un modèle qui soit le plus performant possible. Nous allons utiliser l'algorithme de classification de &lt;strong&gt;LightGBM&lt;/strong&gt;. Pourquoi? [J'ai découvert ce framework récemment alors que je participais à une compétition sur Kaggle.] LightGBM fournit des résultats robustes et il est largement utilisé dans de &lt;a href="https://github.com/microsoft/LightGBM/blob/master/examples/README.md#machine-learning-challenge-winning-solutions"&gt;nombreuses solutions gagnantes&lt;/a&gt; de concours de machine learning.&lt;/p&gt;
+&lt;p&gt;En guise d'expliquer comment l'algorithme fonctionne, nous nous contenterons de mentionner que  nous allons utiliser une approche de machine learning supervisé et que &lt;strong&gt;LightGBM&lt;/strong&gt; est un framework de &lt;em&gt;gradient boosting&lt;/em&gt; qui utilise des algorithmes d'apprentissage basés sur des arbres. Il est conçu pour être distribué et efficient avec les avantages suivants:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Vitesse d'entraînement plus rapide et efficacité plus élevée.&lt;/p&gt;
 &lt;/li&gt;
@@ -1855,7 +1859,7 @@ h6:hover .anchor-link {
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;A ce stade, on recourt à plusieurs techniques afin d'optimiser notre jeu de données. En realité, on en a déjà appliqué quelques-unes au début lorsqu'il était question de gérer les valeurs manquantes, les dupplications, l'extraction des dates, One-Hot-Encoding, etc. A présent nous allons appliquer la technique dite &lt;em&gt;scaling&lt;/em&gt; sur quelques variables du jeu. Cette technique a la vertu de mettre toutes les variables numériques quantitatives sur une même base comparable. Bien, à quoi ressemble notre jeu maintenant?&lt;/p&gt;
+&lt;p&gt;A ce stade, nous avons eu recourt à plusieurs techniques afin d'optimiser notre jeu de données. En réalité, nous en avons déjà appliqué quelques-unes au début lorsqu'il était question de gérer les valeurs manquantes, les duplications, l'extraction des dates, One-Hot-Encoding, etc. A présent nous allons appliquer la technique dite &lt;em&gt;scaling&lt;/em&gt; sur quelques variables du jeu. Cette technique a la vertu de mettre toutes les variables numériques quantitatives sur une même base comparable. Bien, voyons à quoi ressemble notre jeu maintenant?&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -2069,7 +2073,7 @@ Name: hit, dtype: int64&lt;/pre&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Tout est fin prêt pour entraîner et évaluer notre fameux modèle.&lt;/p&gt;
+&lt;p&gt;Tout est fin prêt pour entraîner et évaluer notre modèle.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -2182,7 +2186,7 @@ Name: hit, dtype: int64&lt;/pre&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;La matrice de confusion est une matrice qui mesure la qualité d'un système de classification. Le diagonal principal représente les observations clasées correctement par le modèle, et le diagonal secondaire, celles classées incorrectement. De ce fait, l'erreur la plus fréquente commise par le modèle est d'avoir classé une chanson en tant que non-hit alors qu'en realité elle était hit (837 cas), l'erreur de type II plus précisément.&lt;/p&gt;
+&lt;p&gt;La matrice de confusion est une matrice qui mesure la qualité d'un système de classification. Le diagonal principal représente les observations classées correctement par le modèle, et le diagonal secondaire, celles classées incorrectement. De ce fait, l'erreur la plus fréquente commise par le modèle est d'avoir classé une chanson en tant que non-hit alors qu'en réalité elle était hit (837 cas), l'erreur de type II plus précisément.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -2190,7 +2194,7 @@ Name: hit, dtype: int64&lt;/pre&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;L'erreur de type I consiste en ce que le modèle classe une musique comme hit alors qu'elle est non-hit; et l'erreur de type II, l'inverse, c'est-à-dire le cas où il classe une musique comme non-hit pourtant elle est hit. Si on essaie de comprendre la psychologie d'un producteur de musiques, l'erreur de type I est moins acceptable que celle de type II. On ne voudrait pas consentir toutes les dépenses liées à la production et la promotion d'une musique qu'un modèle a prédit 'hit' pour que finalement elle ne l'est pas. La valeur de l'erreur du type I devrait être minimale. De manière générale, le modèle devrait être plus perfomant.&lt;/p&gt;
+&lt;p&gt;L'erreur de type I consiste en ce que le modèle classe une musique comme hit alors qu'elle est non-hit; et l'erreur de type II, l'inverse; c'est-à-dire le cas où il classe une musique comme non-hit pourtant elle est hit. Si nous essayons de comprendre la psychologie d'un producteur de musiques, l'erreur de type I est moins acceptable que celle de type II. On ne voudrait pas consentir toutes les dépenses liées à la production et la promotion d'une musique qu'un modèle a prédit 'hit' pour que finalement elle ne l'est pas. La valeur de l'erreur du type I devrait être minimale. De manière générale, le modèle devrait être plus performant.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -2208,8 +2212,7 @@ Name: hit, dtype: int64&lt;/pre&gt;
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[15]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#plt.figure(figsize=(16,8))&lt;/span&gt;
-&lt;span class="n"&gt;ax&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;lgb&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_importance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;clf&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;height&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;                  
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;ax&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;lgb&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_importance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;clf&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;height&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;                  
                          &lt;span class="n"&gt;max_num_features&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
                          &lt;span class="n"&gt;importance_type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;split&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
                          &lt;span class="n"&gt;xlim&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;500&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;ylim&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
@@ -2434,7 +2437,9 @@ Name: hit, dtype: int64&lt;/pre&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Dans cette première partie de l'article, on a construit un modèle pouvant classer une chanson en hit ou non-hit suivant des variables lui étant propres. De notre analyse il faut retenir ceci: essentiellement, une chanson est hit si elle est populaire sur Spotify, est interpretée par un artiste lui-même populaire sur Spotify et possède un nombre important de followers, et enfin, si elle est disponible dans le plus grand nombre de pays à travers le monde. Cette conclusion me semble logique, mais elle est aussi vérifée empiriquement par notre modèle.&lt;/p&gt;
+&lt;p&gt;Dans cette première partie de l'article, nous avons construit un modèle pouvant classer une chanson en hit ou non-hit suivant des variables lui étant propres. Pour y parvenir, nous avons utilisé Billboard et Spotify pour construire notre jeu de données. Une brève visualisation des données a été effectuée avant d'entraîner le modèle. Nous avons mis en application les techniques de « feature engineering » afin de normaliser les données. La technique SMOTE nous a été utile afin d'assurer la gestion de nos données qui, au regard des modalités de notre variable dépendante « hit », étaient déséquilibrées, .&lt;/p&gt;
+&lt;p&gt;Après avoir entraîné et évalué le modèle uniquement avec les données liées à l'audio, une précision de 86 % a été obtenue; et, après ajout d'autres variables liées au profil de l'artiste dans le modèle, la précision a atteint les 98 %.&lt;/p&gt;
+&lt;p&gt;De notre analyse il faut retenir ceci: essentiellement, une musique est « hit » si elle est populaire sur Spotify, est interpretée par un artiste lui-même populaire sur Spotify et possède un nombre important de followers, et enfin, si elle est disponible dans le plus grand nombre de pays à travers le monde. Cette conclusion semble logique, mais elle est aussi vérifiée empiriquement par notre modèle.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -2442,7 +2447,7 @@ Name: hit, dtype: int64&lt;/pre&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Généralement, une musique possède une autre caractéristique importante qu'on n'a pas encore prise en compte: les paroles. Pouvons-nous augmenter davantage la performance du modèle en nous servant des lyriques? C'est ce que nous allons explorer dans la deuxième partie de l'article.&lt;/p&gt;
+&lt;p&gt;Généralement, une musique possède une autre caractéristique importante que nous n'avons pas encore prise en compte: les paroles. Pouvons-nous augmenter davantage la performance du modèle en nous servant des lyriques? C'est ce que nous allons explorer dans la deuxième partie de l'article.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
