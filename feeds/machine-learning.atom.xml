@@ -1987,7 +1987,7 @@ h6:hover .anchor-link {
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Veuillez remarquer que toutes les variables quantitatives indépendantes sont comprises dans l'intervalle [0,1]. Dans la réalité, cela ne fait aucun sens qu'une variable tel que &lt;em&gt;tot_followers&lt;/em&gt;, par exemple, contienne des valeurs entre 0 et 1. Mais du point de vue de l'algorithme, cela a tout son sens car c'est par ce procédé que les variables deviennent comparables. Les algorithmes de machine learning fonctionnent mieux lorsque les variables indépendantes sont relativement à une échelle similaire et proches de la distribution normale.&lt;/p&gt;
+&lt;p&gt;Veuillez remarquer que toutes les variables quantitatives indépendantes sont comprises dans l'intervalle [0,1]. Dans la réalité, cela ne fait aucun sens qu'une variable telle que &lt;em&gt;tot_followers&lt;/em&gt;, par exemple, contienne des valeurs entre 0 et 1. Mais du point de vue de l'algorithme, cela a tout son sens car c'est par ce procédé que les variables deviennent comparables. Les algorithmes de machine learning fonctionnent mieux lorsque les variables indépendantes sont relativement à une échelle similaire et proches de la distribution normale.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
