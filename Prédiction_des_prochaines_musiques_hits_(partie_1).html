@@ -1331,7 +1331,7 @@ h6:hover .anchor-link {
 <p>Ensuite, nous avons utilisé le package <a href="https://spotipy.readthedocs.io/en/2.12.0/">Spotipy</a> pour récupérer les caractéristiques relatives, d'une part, à l’audio telles que la dansabilité, la vivacité, l'instrumentalité, etc; et d'autre part, à l’artiste comme la popularité, le nombre de followers etc. pour des chansons hits provenant du Billboard Year-End Hot 100 et d'autres chansons non-hits de la même période.</p>
 <p>Et enfin, <a href="https://genius.com/">Genius</a> sera utilisé principalement pour la récupération des paroles des chansons que nous avons recueillies.</p>
 <p>Une musique de notre dataset est considérée comme un « hit » si elle a fait partie du classement du Billboard Year-End Hot 100 au moins une fois pendant l’une des années sur la période considérée. En d'autres termes, notre modèle aura pour mission de prédire si une chanson fera partie de la liste des 100 musiques les plus populaires de Billboard ou non.</p>
-<p>Notre jeu de données est construit à partir d'un programme Python, utilisant des packages de data science parmi les plus utilisés. Tous les codes du projet sont accessibles <a href="https://github.com/JBobyM/Data-Science-Projects">ici</a>.</p>
+<p>Notre jeu de données est construit à partir d'un programme Python, utilisant des packages parmi les plus utilisés en data science. Tous les codes du projet sont accessibles <a href="https://github.com/JBobyM/Data-Science-Projects">ici</a>.</p>
 <h5 id="Outils-utilis&#233;s:">Outils utilis&#233;s:<a class="anchor-link" href="#Outils-utilis&#233;s:">&#182;</a></h5><ul>
 <li>Le package spotipy pour accéder aux données de la plateforme musicale de Spotify</li>
 <li>seaborn et matplotlib pour la visualisation des données</li>
@@ -1852,7 +1852,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Les deux distributions sont assymétriques à droite. Cependant, l'assymétrie de la distribution des musiques hits est plus prononcée. 75 % des musiques non-hits ont des artistes dont la popularité est inférieure à 82, alors que seulement la popularité des artistes de 50 % des musiques hits est inférieure à ce nombre. <strong>pop_artiste</strong> pourrait être une variable explicative importante dans la prédiction de notre variable d'intérêt.</p>
+<p>Les deux distributions sont assymétriques à droite. Cependant, l'assymétrie de la distribution des musiques hits est plus prononcée. 75 % des musiques non-hits ont des artistes dont la popularité est inférieure à 82, alors que seulement la popularité des artistes de 50 % des musiques hits est inférieure à ce nombre. <strong>pop_artiste</strong> pourrait être une variable explicative importante dans la prédiction de la classe d'une chanson.</p>
 
 </div>
 </div>
@@ -2340,7 +2340,7 @@ Name: hit, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>L'erreur de type I consiste en ce que le modèle classe une musique comme hit alors qu'elle est non-hit; et l'erreur de type II, l'inverse; c'est-à-dire le cas où il classe une musique comme non-hit pourtant elle est hit. Si nous essayons de comprendre la psychologie d'un producteur de musiques, l'erreur de type I est moins acceptable que celle de type II. On ne voudrait pas consentir toutes les dépenses liées à la production et la promotion d'une musique qu'un modèle a prédit 'hit' pour que finalement elle ne l'est pas. La valeur de l'erreur du type I devrait être minimale. De manière générale, le modèle devrait être plus performant.</p>
+<p>L'erreur de type I consiste en ce que le modèle classe une musique comme hit alors qu'elle est non-hit; et l'erreur de type II, l'inverse; c'est-à-dire le cas où il classe une musique comme non-hit pourtant elle est hit. Si nous essayons de comprendre la psychologie d'un producteur de musiques, l'erreur de type I est moins acceptable que celle de type II. On ne voudrait pas consentir toutes les dépenses liées à la production et la promotion d'une musique qu'un modèle a prédit 'hit' pour que finalement elle ne le soit pas. La valeur de l'erreur de type I devrait être minimale. De manière générale, le modèle devrait être plus performant.</p>
 
 </div>
 </div>
@@ -2584,7 +2584,7 @@ Name: hit, dtype: int64</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Dans cette première partie de l'article, nous avons construit un modèle pouvant classer une chanson en hit ou non-hit suivant des variables lui étant propres. Pour y parvenir, nous avons utilisé Billboard et Spotify pour construire notre jeu de données. Une brève visualisation des données a été effectuée avant d'entraîner le modèle. Nous avons mis en application les techniques de « feature engineering » afin de normaliser les données. La technique SMOTE nous a été utile afin d'assurer la gestion de nos données qui, au regard des modalités de notre variable dépendante « hit », étaient déséquilibrées, .</p>
-<p>Après avoir entraîné et évalué le modèle uniquement avec les données liées à l'audio, une précision de 86 % a été obtenue; et, après ajout d'autres variables liées au profil de l'artiste dans le modèle, la précision a atteint les 98 %.</p>
+<p>Après avoir entraîné et évalué le modèle uniquement avec les données liées aux caractéristiques d'audio des musiques, une précision de 86 % a été obtenue; et, après ajout d'autres variables liées au profil de l'artiste dans le modèle, la précision a atteint les 98 %.</p>
 <p>De notre analyse il faut retenir ceci: essentiellement, une musique est « hit » si elle est populaire sur Spotify, est interpretée par un artiste lui-même populaire sur Spotify et possède un nombre important de followers, et enfin, si elle est disponible dans le plus grand nombre de pays à travers le monde. Cette conclusion semble logique, mais elle est aussi vérifiée empiriquement par notre modèle.</p>
 
 </div>
