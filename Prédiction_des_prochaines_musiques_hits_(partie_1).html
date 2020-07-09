@@ -2354,7 +2354,7 @@ Name: hit, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>La matrice de confusion est une matrice qui mesure la qualité d'un système de classification. Le diagonal principal représente les observations classées correctement par le modèle, et le diagonal secondaire, celles classées incorrectement. De ce fait, l'erreur la plus fréquente commise par le modèle est d'avoir classé une chanson en tant que non-hit alors qu'en réalité elle était hit (732 cas), l'erreur de type I plus précisément.</p>
+<p>La matrice de confusion est une matrice qui mesure la qualité d'un système de classification. Dans le cadre d'une classification binaire, le diagonal principal de la matrice de confusion représente les observations classées correctement par le modèle; et le diagonal secondaire, celles classées incorrectement. De ce fait, l'erreur la plus fréquente commise par le modèle est d'avoir classé une chanson en tant que hit alors qu'en réalité elle était non-hit (732 cas), l'erreur de type I plus précisément.</p>
 
 </div>
 </div>
@@ -2362,7 +2362,7 @@ Name: hit, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>L'erreur de type I consiste en ce que le modèle classe une musique comme hit alors qu'elle est non-hit; et l'erreur de type II, l'inverse; c'est-à-dire le cas où il classe une musique comme non-hit pourtant elle est hit. Si nous essayons de comprendre la psychologie d'un producteur de musiques, l'erreur de type I est moins acceptable que celle de type II. On ne voudrait pas consentir toutes les dépenses liées à la production et la promotion d'une musique qu'un modèle a prédite hit pour que finalement elle ne le soit pas. La valeur de l'erreur de type I devrait être minimale. De manière générale, le modèle devrait être plus performant.</p>
+<p>L'erreur de type I consiste en ce que le modèle classe une musique comme hit alors qu'elle est non-hit; et l'erreur de type II, l'inverse; c'est-à-dire le cas où il classe une musique comme non-hit pourtant elle est hit. Si nous essayons de comprendre la psychologie d'un producteur de musiques, l'erreur de type I est moins acceptable que celle de type II. On ne voudrait pas consentir toutes les dépenses liées à la production et la promotion d'une musique qu'un modèle a prédit hit pour que finalement elle ne le soit pas. La valeur de l'erreur de type I devrait être minimale. De manière générale, le modèle devrait être plus performant.</p>
 
 </div>
 </div>
@@ -2593,7 +2593,7 @@ weighted avg       0.92      0.84      0.88      5755
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Les erreurs de type I et II sont passées respectivement de 732 à 114 et de 189 à 129 cas. Elles sont toutes deux diminuées et plus proches. Cela témoigne du niveau, très proche et faible, de probabilité pour le modèle de classer incorrectement une chanson.</p>
+<p>Les erreurs de type I et II sont passées respectivement de 732 à 114 et de 189 à 129 cas. Elles sont toutes deux diminuées et plus proches. Cela témoigne du niveau global, très proche et faible, de probabilité pour le modèle de classer incorrectement une chanson.</p>
 
 </div>
 </div>
@@ -2648,7 +2648,7 @@ weighted avg       0.96      0.96      0.96      5755
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Constat:</strong> Les taux de précision et de sensibilité (recall) sont augmentés pour chaque classe. L' « accuracy » est beaucoup plus proche de 1. Les résultats sont plus satisfaisants. Bref, le modèle est meilleur.</p>
+<p><strong>Constat:</strong> Les taux de précision et de sensibilité (recall) ont augmenté pour chaque classe. L' « accuracy » est beaucoup plus proche de 1. Les résultats sont plus satisfaisants. Bref, le modèle est meilleur.</p>
 
 </div>
 </div>
