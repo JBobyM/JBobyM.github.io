@@ -5,41 +5,41 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://jbobym.github.io/</loc>
-<lastmod>2020-07-23T15:04:27-00:00</lastmod>
+<lastmod>2020-07-23T16:41:38-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/archives.html</loc>
-<lastmod>2020-07-23T15:04:27-00:00</lastmod>
+<lastmod>2020-07-23T16:41:38-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/search.html</loc>
-<lastmod>2020-07-23T15:04:27-00:00</lastmod>
+<lastmod>2020-07-23T16:41:38-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/404.html</loc>
-<lastmod>2020-07-23T15:04:27-00:00</lastmod>
+<lastmod>2020-07-23T16:41:38-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/about.html</loc>
-<lastmod>2020-07-23T15:04:27-00:00</lastmod>
+<lastmod>2020-07-23T16:41:38-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://jbobym.github.io/Utlisation des données de Spotify pour prédire quelle musique va être hit (partie 1)</loc>
+<loc>https://jbobym.github.io/Utlisation_des_données_de_spotify_pour_prédire_quelle_musique_va_être_hit</loc>
 <lastmod>2020-07-23T00:00:00-04:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
