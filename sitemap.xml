@@ -5,147 +5,147 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://jbobym.github.io/</loc>
-<lastmod>2020-07-23T12:50:48-00:00</lastmod>
+<lastmod>2020-07-23T13:04:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/archives.html</loc>
-<lastmod>2020-07-23T12:50:48-00:00</lastmod>
+<lastmod>2020-07-23T13:04:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/search.html</loc>
-<lastmod>2020-07-23T12:50:48-00:00</lastmod>
+<lastmod>2020-07-23T13:04:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/404.html</loc>
-<lastmod>2020-07-23T12:50:48-00:00</lastmod>
+<lastmod>2020-07-23T13:04:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/about.html</loc>
-<lastmod>2020-07-23T12:50:48-00:00</lastmod>
+<lastmod>2020-07-23T13:04:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://jbobym.github.io/Prédiction_des_prochaines_musiques_hits_(partie_1)</loc>
-<lastmod>2020-07-01T00:00:00-04:00</lastmod>
+<loc>https://jbobym.github.io/Utlisation des données de Spotify pour prédire quelle musique va être hit (partie 1)</loc>
+<lastmod>2020-07-23T00:00:00-04:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/category/machine-learning.html</loc>
-<lastmod>2020-07-01T00:00:00-04:49</lastmod>
+<lastmod>2020-07-23T00:00:00-04:49</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/tag/model.html</loc>
-<lastmod>2020-07-01T00:00:00-04:49</lastmod>
+<lastmod>2020-07-23T00:00:00-04:49</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/tag/supervised-learning.html</loc>
-<lastmod>2020-07-01T00:00:00-04:49</lastmod>
+<lastmod>2020-07-23T00:00:00-04:49</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/tag/feature-engineering.html</loc>
-<lastmod>2020-07-01T00:00:00-04:49</lastmod>
+<lastmod>2020-07-23T00:00:00-04:49</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/tag/data-enrichment.html</loc>
-<lastmod>2020-07-01T00:00:00-04:49</lastmod>
+<lastmod>2020-07-23T00:00:00-04:49</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/tag/plot-importance.html</loc>
-<lastmod>2020-07-01T00:00:00-04:49</lastmod>
+<lastmod>2020-07-23T00:00:00-04:49</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/tag/dataviz.html</loc>
-<lastmod>2020-07-01T00:00:00-04:49</lastmod>
+<lastmod>2020-07-23T00:00:00-04:49</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/tag/music.html</loc>
-<lastmod>2020-07-01T00:00:00-04:49</lastmod>
+<lastmod>2020-07-23T00:00:00-04:49</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/tag/spotify.html</loc>
-<lastmod>2020-07-01T00:00:00-04:49</lastmod>
+<lastmod>2020-07-23T00:00:00-04:49</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/tag/python.html</loc>
-<lastmod>2020-07-01T00:00:00-04:49</lastmod>
+<lastmod>2020-07-23T00:00:00-04:49</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/tag/web-scrapping.html</loc>
-<lastmod>2020-07-01T00:00:00-04:49</lastmod>
+<lastmod>2020-07-23T00:00:00-04:49</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/tag/bilboard-year-end-hot-100.html</loc>
-<lastmod>2020-07-01T00:00:00-04:49</lastmod>
+<lastmod>2020-07-23T00:00:00-04:49</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/tag/scikit-learn.html</loc>
-<lastmod>2020-07-01T00:00:00-04:49</lastmod>
+<lastmod>2020-07-23T00:00:00-04:49</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/tag/spotipy.html</loc>
-<lastmod>2020-07-01T00:00:00-04:49</lastmod>
+<lastmod>2020-07-23T00:00:00-04:49</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/tag/smote.html</loc>
-<lastmod>2020-07-01T00:00:00-04:49</lastmod>
+<lastmod>2020-07-23T00:00:00-04:49</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
