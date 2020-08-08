@@ -5,41 +5,41 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://jbobym.github.io/</loc>
-<lastmod>2020-08-06T23:30:13-00:00</lastmod>
+<lastmod>2020-08-08T11:45:34-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/archives.html</loc>
-<lastmod>2020-08-06T23:30:13-00:00</lastmod>
+<lastmod>2020-08-08T11:45:34-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/search.html</loc>
-<lastmod>2020-08-06T23:30:13-00:00</lastmod>
+<lastmod>2020-08-08T11:45:34-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/404.html</loc>
-<lastmod>2020-08-06T23:30:13-00:00</lastmod>
+<lastmod>2020-08-08T11:45:34-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://jbobym.github.io/about.html</loc>
-<lastmod>2020-08-06T23:30:13-00:00</lastmod>
+<lastmod>2020-08-08T11:45:34-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://jbobym.github.io/Utlisation_des_données_de_spotify_pour_prédire_quelle_musique_va_être_hit</loc>
+<loc>https://jbobym.github.io/analyse_et_prédiction_des_prochaines_musiques_hits_de_Billboard</loc>
 <lastmod>2020-08-06T00:00:00-04:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
