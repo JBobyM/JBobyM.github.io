@@ -3,23 +3,40 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-first_name: You
-middle_name: R.
-last_name: Name
-contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+first_name: John Boby
+middle_name:
+last_name: Mesadieu
+email: jbobyberry@gmail.com
+description: > # used for the site meta description and social previews
+    Personal site of John Boby Mesadieu — statistician and machine learning researcher
+    in Ottawa, Canada. Bayesian methods, causal inference, generative models for
+    medical imaging.
+
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+    Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a>
+    with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="external nofollow noopener">al-folio</a>.
+
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: 🦊  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://alshedivat.github.io # the base hostname & protocol for your site
-baseurl: /al-folio # the subpath of your site, e.g. /blog/. Leave blank for root
+profile:
+  align: right
+  image: prof_pic.jpg
+  image_circular: false
+  more_info: >
+    <p>Ottawa, Canada</p>
+    <p>Statistician &amp; ML researcher</p>
+    <p>Open to research and applied scientist roles</p>
+
+github_username: JBobyM
+linkedin_username: jbobym
+scholar_userid: [your Google Scholar ID — see below]
+orcid_id: [your ORCID, format 0000-0000-0000-0000]
+
+url: https://johnbobymesadieu.com # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog/. Leave blank for root
+repo: JBobyM/JBobyM.github.io
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
